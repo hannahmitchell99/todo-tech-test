@@ -1,0 +1,9 @@
+.to-do-item{
+    border: 2px solid black;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px;
+}
