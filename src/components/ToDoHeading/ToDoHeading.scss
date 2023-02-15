@@ -1,0 +1,17 @@
+.to-do-heading {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "heading heading button";
+
+  &__header {
+    grid-area: heading;
+  }
+
+  &__reset {
+    justify-self: center;
+    align-self: center;
+    grid-area: button;
+  }
+}

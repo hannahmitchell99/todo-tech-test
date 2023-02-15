@@ -5,7 +5,7 @@ import "../Nav/Nav.scss"
 
 const Nav = () => {
   return (
-    <nav className='nav-container'>Nav
+    <nav className='nav-container'>
         <ToDoHeading/>
         <Input/>
     </nav>
