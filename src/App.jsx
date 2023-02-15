@@ -27,7 +27,7 @@ const App = () => {
     setToDo(toDo => toDo.filter((item => item.id === handleReset)))
   }
 
-  const handleDelClick =()=>{
+  const handleDelClick =()=> {
 
   }
   return (
@@ -36,7 +36,7 @@ const App = () => {
         userInput={userInput}
         handleInput={handleInput}
         handleClick={handleAddClick}
-        handleDelete={handleResetClick}
+        handleReset={handleResetClick}
       />
       <ToDoItemContainer inputValues={toDo} handleDelete={handleDelClick}/>
     </div>
