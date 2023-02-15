@@ -8,7 +8,7 @@ let index = 0; // had to place it here or the index didn't increment
 const App = () => {
   const [userInput, setUserInput] = useState("");
   const [toDo, setToDo] = useState([]);
-  const [handleDelete, setHandleDelete] = useState(false)
+  const [handleReset, setHandleReset] = useState(false)
   
 
   const handleInput = (event) => {
@@ -22,21 +22,21 @@ const App = () => {
     console.log(toDo);
   };
 
-  const handleDelClick = () => {
-    setHandleDelete(true)
+  const handleResetClick = () => {
+    setHandleReset(true)
+    setToDo(toDo => toDo.filter((item => item.id === handleReset)))
   }
 
-  useEffect(()=> {
-    if (handleDelete){
-        setToDo(toDo => toDo.filter((item => item.id === handleDelete)))
-    }
-  }, [handleDelete])
+  const handleDelClick =()=>{
+
+  }
   return (
     <div className="app">
       <Nav
         userInput={userInput}
         handleInput={handleInput}
         handleClick={handleAddClick}
+        handleDelete={handleResetClick}
       />
       <ToDoItemContainer inputValues={toDo} handleDelete={handleDelClick}/>
     </div>
