@@ -17,7 +17,7 @@ const App = () => {
 
   const handleAddClick = () => {
     setUserInput("");
-    setToDo([...toDo, { id: index++, textInput: userInput, checked: false }]);
+    setToDo([...toDo, { id: index++, textInput: userInput, checkedItem: checked }]);
     console.log(toDo);
   };
 
@@ -33,6 +33,11 @@ const App = () => {
   const handleCheck = () => {
     console.log("working");
     setChecked(!checked);
+    if (toDo.checkedItem){
+        console.log("checked")
+    }else{
+        console.log("not checked")
+    }
   };
   return (
     <div className="app">
