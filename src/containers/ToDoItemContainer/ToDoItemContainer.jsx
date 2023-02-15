@@ -2,12 +2,13 @@ import React from 'react'
 import ToDoItem from '../../components/ToDoItem/ToDoItem'
 import "../ToDoItemContainer/ToDoItemContainer.scss"
 
-const ToDoItemContainer = () => {
-  return (
-    <div className='item-container'>ToDoItemContainer
-    <ToDoItem/>
-    <ToDoItem/>
-    </div>
+const ToDoItemContainer = ({inputValues}) => {
+
+      const inputItemsJSX = inputValues.map((inputValue)=> {
+        return <ToDoItem key={inputValue.id} item={inputValue.textInput}/>
+      })
+      return (
+        <div className='item-container'>{inputItemsJSX}</div>
   )
 }
 

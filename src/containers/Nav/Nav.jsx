@@ -3,11 +3,11 @@ import Input from '../../components/Input/Input'
 import ToDoHeading from '../../components/ToDoHeading/ToDoHeading'
 import "../Nav/Nav.scss"
 
-const Nav = () => {
+const Nav = ({userInput, handleInput, handleClick}) => {
   return (
     <nav className='nav-container'>
-        <ToDoHeading/>
-        <Input/>
+        <ToDoHeading />
+        <Input userInput={userInput} handleClick={handleClick} handleInput={handleInput}/>
     </nav>
   )
 }
