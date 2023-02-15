@@ -1,17 +1,16 @@
-.input-container{
-    border: 2px black solid;
-    border-radius: 3px;
-    display: grid; 
-  grid-template-columns: 1fr 1fr 1fr; 
+.input-container {
+  border: 2px black solid;
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: 1fr 1.7fr 0.3fr; 
   grid-template-rows: 1fr; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    "input input button"; 
+  gap: 0px 0px;
+  grid-template-areas: "input input button";
 
-    &__input{
-        grid-area: input;
-    }
-    &__add{
-        grid-area: button;
-    }
+  &__input {
+    grid-area: input;
+  }
+  &__add {
+    grid-area: button;
+  }
 }
